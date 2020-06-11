@@ -11,7 +11,7 @@ import './Chart.css';
 
 export const Chart = ({ data, country }) => {
     
-    const [dailyData, setDailyData] = useState([]);
+    const [dailyData, setDailyData] = useState({});
 
     useEffect(() =>{
         const fetchAPI = async () => {
