@@ -1,5 +1,7 @@
 import React from 'react'
 
+import logo from '../assets/world.png';
+
 import './Header.css';
 
 export const Header = () => {
@@ -7,8 +9,7 @@ export const Header = () => {
     return (
         <div>
             <h2 className="title">
-                COVID    
-                <img src="../assets/world.png" alt="logo here" />
+                <a className="title-link" href="#">C<img className="img-logo" src={ logo } alt="O" />VID</a>
             </h2>
         </div>
     )

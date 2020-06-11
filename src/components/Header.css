@@ -4,3 +4,17 @@
 .title{
     font-family: 'Balsamiq Sans', cursive;
 }
+
+.img-logo{
+    height: 32px !important;
+    margin-bottom: -2px !important;
+}
+
+.title-link{
+    color: unset;
+    text-decoration: none;
+}
+
+.title-link:hover{
+    text-decoration: none;
+}
