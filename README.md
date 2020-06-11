@@ -1,3 +1,8 @@
+## Libraries Use
+
+1) npm i --save @material-ui/core
+2) npm install --save axios 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
