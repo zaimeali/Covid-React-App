@@ -2,6 +2,8 @@
 
 1) npm i --save @material-ui/core
 2) npm install --save axios 
+3) npm i react-countup --save
+4) npm i react-delay --save
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
