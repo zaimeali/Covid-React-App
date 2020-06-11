@@ -9,7 +9,7 @@ import { Line, Bar } from 'react-chartjs-2';
 // Styles
 import './Chart.css';
 
-export const Chart = () => {
+export const Chart = ({ data, country }) => {
     
     const [dailyData, setDailyData] = useState([]);
 
@@ -44,9 +44,45 @@ export const Chart = () => {
                     /> : null
     );
 
+    const barChart = (
+        data.confirmed ? (
+            <Bar
+                data={{
+                    labels: [
+                        'Infected',
+                        'Recovered',
+                        'Deaths'
+                    ],
+                    datasets: [{
+                        label: 'People', 
+                        backgroundColor: [
+                            'rgba(90, 90, 185, 0.5)',
+                            'rgba(90, 185, 90, 0.5)',
+                            'rgba(185, 90, 90, 0.5)'
+                        ],
+                        data: [
+                            data.confirmed.value,
+                            data.recovered.value,
+                            data.deaths.value
+                        ]
+                    }]
+                }}
+                options={{
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: `Current State in ${country}`
+                    }
+                }}
+            />
+        ) : null
+    );
+
     return (
         <div className="container-chart">
-            { lineChart }
+            { country ? barChart : lineChart }
         </div>
     )
 }

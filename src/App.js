@@ -9,12 +9,13 @@ import { CountryPicker } from './components/CountryPicker/CountryPicker';
 import { Chart } from './components/Charts/Chart';
 
 // API
-import { fetchData } from './api';
+import { fetchData, fetchCountries } from './api';
 
 class App extends React.Component {
 
   state = {
     data: {},
+    country: '',
   }
 
   async componentDidMount() {
@@ -24,9 +25,18 @@ class App extends React.Component {
     this.setState({ data });
   }
 
+  handleCountryChange = async (country) => {
+    const fetchCountry = await fetchData(country);
+
+    this.setState({
+      data: fetchCountry,
+      country: country
+    });
+  }
+
   render() {
 
-    const { data } = this.state;
+    const { data, country } = this.state;
 
     return (
       <div className="App">
@@ -34,9 +44,9 @@ class App extends React.Component {
           <Header />
         </header>
         <main className="App-body container">
+          <CountryPicker handleCountryChange={ this.handleCountryChange } />
           <Cards data={ data } />
-          <CountryPicker />
-          <Chart />
+          <Chart data={ data } country={ country } />
         </main>
       </div>
     );

@@ -21,11 +21,11 @@ export const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) =>
     }
 
     return (
-        <div className="container">
+        <div className="container-card">
                 <Grid container spacing={3} justify="center">
                     <Grid item component={ Card } xs={12} md={3} variant="outlined" className="card infected">
                         <CardContent>
-                            <Typography color="textSecondary" gutterBottom>
+                            <Typography className="heading-card" color="textSecondary" gutterBottom>
                                 Infected
                             </Typography> 
                             <Typography variant="h5">
@@ -39,7 +39,7 @@ export const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) =>
                             <Typography color="textSecondary">
                                 { new Date(lastUpdate).toDateString() }
                             </Typography>
-                            <Typography variant="body2" color="textSecondary">
+                            <Typography className="subtitle-card" variant="body2" color="textSecondary">
                                 Number of active cases of COVID-19
                             </Typography>
                         </CardContent>
@@ -60,7 +60,7 @@ export const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) =>
                             <Typography color="textSecondary">
                                 { new Date(lastUpdate).toDateString() }
                             </Typography>
-                            <Typography variant="body2" color="textSecondary">
+                            <Typography className="subtitle-card" variant="body2" color="textSecondary">
                                 Number of recovery cases from COVID-19
                             </Typography>
                         </CardContent>
@@ -81,7 +81,7 @@ export const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) =>
                             <Typography color="textSecondary">
                                 { new Date(lastUpdate).toDateString() }
                             </Typography>
-                            <Typography variant="body2" color="textSecondary">
+                            <Typography className="subtitle-card" variant="body2" color="textSecondary">
                                 Number of deaths because of COVID-19
                             </Typography>
                         </CardContent>

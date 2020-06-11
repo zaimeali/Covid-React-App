@@ -1,0 +1,9 @@
+.formControl{
+    margin-bottom: 60px !important;
+    display: flex;
+}
+
+.dropdown-country{
+    font-weight: 600;
+    font-size: 18px;
+}
