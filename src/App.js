@@ -9,7 +9,7 @@ import { CountryPicker } from './components/CountryPicker/CountryPicker';
 import { Chart } from './components/Charts/Chart';
 
 // API
-import { fetchData, fetchCountries } from './api';
+import { fetchData } from './api';
 
 class App extends React.Component {
 

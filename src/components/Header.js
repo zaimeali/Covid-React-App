@@ -9,7 +9,7 @@ export const Header = () => {
     return (
         <div>
             <h2 className="title">
-                <a className="title-link" href="#">C<img className="img-logo" src={ logo } alt="O" />VID</a>
+                <a className="title-link" href="https://bootcamp2020_covid_react_app.surge.sh/">C<img className="img-logo" src={ logo } alt="O" />VID</a>
             </h2>
         </div>
     )
